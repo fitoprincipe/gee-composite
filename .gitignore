@@ -1,0 +1,11 @@
+# IDE
+.idea/
+
+# any checkpoint
+**/.ipynb_checkpoints
+
+# environments
+.env/
+
+# Notebooks
+notebooks/
