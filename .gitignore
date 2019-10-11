@@ -5,7 +5,7 @@
 **/.ipynb_checkpoints
 
 # environments
-.env/
+env/
 
 # Notebooks
 notebooks/
