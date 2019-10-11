@@ -9,3 +9,11 @@ env/
 
 # Notebooks
 notebooks/
+
+# Distribution / packaging
+/build
+/dist/
+*.egg-info/
+
+# Unit test / coverage reports
+.cache
