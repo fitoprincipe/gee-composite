@@ -13,7 +13,7 @@ class Map(VBox):
         self.name = Text(description='Name', value='BAP_composite')
         self.make_name_button = Button(description='Make name')
         self.visualization = Select(description='VisParams', options=['NSR', 'RGB'], value='NSR')
-        self.add_map_button = Button(description='Add using bounds',
+        self.add_map_button = Button(description='Add using map bounds',
                                      tooltip='Add composite to Map using Map bounds')
         self.add_site_button = Button(description='Add using Site',
                                       tooltip='Add composite to Map using the Site')
