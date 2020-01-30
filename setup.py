@@ -22,7 +22,7 @@ setup(
     version=version_ns['__version__'],
     description='Making Satellite images composites using Google Earth Engine Python API',
     long_description='',
-    url='',
+    url='https://github.com/fitoprincipe/gee-composite',
     author='Rodrigo E. Principe',
     author_email='fitoprincipe82@gmail.com',
     license='MIT',

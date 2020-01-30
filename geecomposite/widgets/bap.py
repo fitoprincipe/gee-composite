@@ -41,6 +41,7 @@ class Bap(Tab):
         link((self.collections_widget, 'bands'), (self.scores_widget.outliers, 'options'))
         link((self.collections_widget, 'bands'), (self.scores_widget.medoid, 'options'))
         link((self.collections_widget, 'bands'), (self.asset_widget.bands, 'options'))
+        link((self.years_widget, 'all_years'), (self.scores_widget.multiyear.main_year, 'options'))
 
         self.children = [self.manager_widget, self.site_widget, self.collections_widget,
                          self.season_widget, self.years_widget, self.clouds_widget,
@@ -90,6 +91,12 @@ class Bap(Tab):
         if self.scores_widget.get_check(6):
             medoid = geebap.scores.Medoid(self.scores_widget.medoid.value)
             scores.append(medoid)
+        if self.scores_widget.get_check(7):
+            multiyear = geebap.scores.MultiYear(self.season_widget.getSeason(),
+                                                float(self.scores_widget.multiyear.ratio.value),
+                                                int(self.scores_widget.multiyear.main_year.value)
+                                                )
+            scores.append(multiyear)
 
         return scores
 

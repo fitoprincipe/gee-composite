@@ -21,11 +21,22 @@ class Scores(ui.widgets.CheckAccordion):
             options = ['ndvi', 'nbr'],
             description = 'Bands for index'
         )
+        self.multiyear = MultiYear()
 
         widgets = [self.doy, self.satellite, self.cloud_distance,
-                   self.maskcover, self.index, self.outliers, self.medoid]
+                   self.maskcover, self.index, self.outliers, self.medoid,
+                   self.multiyear]
 
         super(Scores, self).__init__(widgets, **kwargs)
 
         self.set_titles(['DOY', 'Satellite', 'Cloud Distance',
-                         'Mask Cover', 'Index', 'Outliers', 'Medoid'])
+                         'Mask Cover', 'Index', 'Outliers', 'Medoid',
+                         'Multi Year'])
+
+
+class MultiYear(VBox):
+    def __init__(self, **kwargs):
+        super(MultiYear, self).__init__(**kwargs)
+        self.main_year = Select(description='Main year')
+        self.ratio = Text(description='ratio', value='0.05')
+        self.children = [self.main_year, self.ratio]

@@ -11,8 +11,8 @@ env/
 notebooks/
 
 # Distribution / packaging
-/build
-/dist/
+build/
+dist/
 *.egg-info/
 
 # Unit test / coverage reports
